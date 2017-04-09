@@ -1,0 +1,21 @@
+{
+    "name": "u_mulder/yaml2btx",
+    "description": "Code generation package",
+    "keywords": ["bitrix", "code generation"],
+    "version": "v1.0.0",
+    "authors": [
+        {
+            "name": "U_mulder",
+            "email": "m264695502@gmail.com"
+        }
+    ],
+    "require": {
+        "symfony/yaml": "^3.2",
+        "philo/laravel-blade": "3.*"
+    },
+    "autoload" : {
+        "psr-4": {
+            "Yaml2Btx\\": "src/"
+        }
+    }
+}
