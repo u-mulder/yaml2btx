@@ -1,10 +1,5 @@
-<?php
-$tag = '<?php';?>
-{!! $tag !!}
-// defined document root if required.
-$_SERVER['DOCUMENT_ROOT'] = __DIR__;
-//require_once($_SERVER['DOCUMENT_ROOT'] . '/bitrix/modules/main/include/prolog_before.php');
-//require_once($_SERVER['DOCUMENT_ROOT'] . '/bitrix/header.php');
+@component('header')
+@endcomponent
 
 /**
  * Creating iblock tepmlate script with D7.
