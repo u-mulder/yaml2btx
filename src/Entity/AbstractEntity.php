@@ -20,6 +20,27 @@ abstract class AbstractEntity
     const DEFAULT_SORT = 500;
 
     /**
+     * @var string Description type "html"
+     *
+     * @author u_mulder <m264695502@gmail.com>
+     */
+    const DESC_TYPE_HTML = 'html';
+
+     /**
+      * @var string Description type "text"
+      *
+      * @author u_mulder <m264695502@gmail.com>
+      */
+    const DESC_TYPE_TEXT = 'text';
+
+    /**
+     * @var string Site dir Macro
+     *
+     * @author u_mulder <m264695502@gmail.com>
+     */
+    const SITE_DIR_MACRO = '/#SITE_DIR#/';
+
+    /**
      * @var string Common value "N" (no, false)
      *
      * @author u_mulder <m264695502@gmail.com>
@@ -96,6 +117,24 @@ abstract class AbstractEntity
             ->view()
             ->make(static::TEMPLATE_NAME, $this->entity_data)
             ->render();
+    }
+
+
+    /**
+     * Check if value can be considered NO-value
+     *
+     * @param mixed $value Value to check
+     *
+     * @return bool
+     *
+     * @author u_mulder <m264695502@gmail.com>
+     */
+    protected function isNoValue($value)
+    {
+        return $value === false
+            || $value === 'N'
+            || $value === 'n'
+            || $value === 'no';
     }
 
 
