@@ -13,6 +13,27 @@ abstract class AbstractEntity
 {
 
     /**
+     * @var int Default sort for SORT fields
+     *
+     * @author u_mulder <m264695502@gmail.com>
+     */
+    const DEFAULT_SORT = 500;
+
+    /**
+     * @var string Common value "N" (no, false)
+     *
+     * @author u_mulder <m264695502@gmail.com>
+     */
+    const VALUE_N = 'N';
+
+    /**
+     * @var string Common value "Y" (yes, true)
+     *
+     * @author u_mulder <m264695502@gmail.com>
+     */
+    const VALUE_Y = 'Y';
+
+    /**
      * @var mixed Entity data, usually array
      *
      * @author u_mulder <m264695502@gmail.com>
@@ -28,6 +49,7 @@ abstract class AbstractEntity
 
     /**
      * @var string Path to blade templates
+     *
      * @author u_mulder <m264695502@gmail.com>
      */
     protected $tpl_path;
@@ -74,6 +96,24 @@ abstract class AbstractEntity
             ->view()
             ->make(static::TEMPLATE_NAME, $this->entity_data)
             ->render();
+    }
+
+
+    /**
+     * Check if value can be considered YES-value
+     *
+     * @param mixed $value Value to check
+     *
+     * @return bool
+     *
+     * @author u_mulder <m264695502@gmail.com>
+     */
+    protected function isYesValue($value)
+    {
+        return $value === true
+            || $value === 'Y'
+            || $value === 'y'
+            || $value === 'yes';
     }
 
 
