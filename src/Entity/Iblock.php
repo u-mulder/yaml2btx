@@ -7,8 +7,6 @@
 
 namespace Yaml2Btx\Entity;
 
-use Philo\Blade\Blade;
-
 class Iblock extends AbstractEntity
 {
 
@@ -99,7 +97,7 @@ class Iblock extends AbstractEntity
                 trim($fields['DESCRIPTION']) : '';
 
             $desc_type =
-                !empty($fields['DESC_TEXT']) && self::DESC_TYPE_HTML == $fields['DESC_TEXT'] ?
+                !empty($fields['DESC_TYPE']) && self::DESC_TYPE_HTML == $fields['DESC_TYPE'] ?
                 self::DESC_TYPE_HTML : self::DESC_TYPE_TEXT;
             $this->entity_data['ib']['DESC_TYPE'] = $desc_type;
 

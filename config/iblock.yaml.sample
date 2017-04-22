@@ -1,0 +1,32 @@
+ Yaml sample for iblock creation
+type: iblock
+# Fields of all cases are supported
+fields:
+    # Iblock name
+    name: Company news
+    # Active or not
+    active: Y
+    # Iblock code
+    code: company_news
+    # Iblock type
+    type: news
+    # Sort
+    sort: 200
+    # XML ID
+    xml_id: ~
+    # Index sections for search
+    INDEX_SECTION: n
+    # Index elements for search
+    INDEX_ELEMENT: y
+    # Iblock version
+    VERSION: 2
+    # Description
+    DESCRIPTION: Desription is text to describe a purpose of an iblock
+    # Description type: text or html
+    DESC_TYPE: html
+    # Section page url
+    SECTION_PAGE_URL: "#SITE_DIR#/iblock/section.php"
+    # List page url
+    LIST_PAGE_URL: "#SITE_DIR#/iblock/list.php"
+    # DEtail page url
+    DETAIL_PAGE_URL: "#SITE_DIR#/iblock/detail.php"

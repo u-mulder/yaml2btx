@@ -1,0 +1,5 @@
+# Ignore all custom configs
+*
+# Except sample ones and .gitignore
+!.gitignore
+!*.yaml.sample
