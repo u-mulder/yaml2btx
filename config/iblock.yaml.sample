@@ -1,4 +1,4 @@
- Yaml sample for iblock creation
+# Yaml sample for iblock creation
 type: iblock
 # Fields of all cases are supported
 fields:
