@@ -1,0 +1,5 @@
+# This directory is empty by default.
+# Later you can add generated scripts here, they will be ignored by git
+*
+# Except this file
+!.gitignore
