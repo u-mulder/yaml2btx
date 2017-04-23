@@ -28,5 +28,5 @@ fields:
     SECTION_PAGE_URL: "#SITE_DIR#/iblock/section.php"
     # List page url
     LIST_PAGE_URL: "#SITE_DIR#/iblock/list.php"
-    # DEtail page url
+    # Detail page url
     DETAIL_PAGE_URL: "#SITE_DIR#/iblock/detail.php"

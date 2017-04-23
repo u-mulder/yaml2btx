@@ -1,0 +1,42 @@
+# Yaml sample for iblock creation
+type: userfield
+# Fields of all cases are supported
+fields:
+    # Entity ID
+    entity_id: USER
+    # Field Name
+    FIELD_NAME: other_system_id
+    # User type id
+    user_type_id: string
+    # Sort
+    sort: 350
+    # XML ID
+    xml_id: ~
+    # Multiple
+    MULTIPLE: Y
+    # Mandatory
+    Mandatory: ~
+    # Show filter
+    SHOW_FILTER: n
+    # Show in list
+    SHOW_IN_LIST: Y
+    # Edit in list
+    edit_in_list: n
+    # Is searchable
+    IS_SEARCHABLE: Y
+    # Messages and labels
+    # Label for edit
+    EDIT_FORM_LABEL:
+        ru: "По-русски"
+        en: "In english"
+    # Label for list column
+    LIST_COLUMN_LABEL:
+    # Label for list filter
+    LIST_FILTER_LABEL: ~
+    # Error message
+    ERROR_MESSAGE:
+        en: "Error msg in English"
+    # Help message
+    HELP_MESSAGE:
+        ru: "Сообщение о помощи"
+        en: "Help msg in English"

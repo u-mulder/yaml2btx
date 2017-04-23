@@ -78,9 +78,11 @@ class Iblock extends AbstractEntity
                 !empty($fields['ACTIVE']) && $this->isNoValue($fields['ACTIVE']) ?
                 self::VALUE_N : self::VALUE_Y;
 
-            $sort = !empty($fields['SORT']) ?
-                (int)$fields['SORT'] : self::DEFAULT_SORT;
-            $this->entity_data['ib']['SORT'] = 0 < $sort? $sort : self::DEFAULT_SORT;
+            $this->entity_data['ib']['SORT'] = static::DEFAULT_SORT;
+            $sort = !empty($fields['SORT']) ? (int)$fields['SORT'] : 0;
+            if (0 < $sort) {
+                $this->entity_data['ib']['SORT'] = $sort;
+            }
 
             $urls = [
                 'SECTION_PAGE_URL' => static::IBLOCK_SECTION_URL,
@@ -114,7 +116,7 @@ class Iblock extends AbstractEntity
 
             $version = !empty($fields['VERSION']) ?
                 (int)$fields['VERSION'] : self::IBLOCK_VERSION_DEFAULT;
-            $this->entity_data['ib']['VERSION'] = $version == self::IBLOCK_VERSION_DEFAULT?
+            $this->entity_data['ib']['VERSION'] = $version == self::IBLOCK_VERSION_DEFAULT ?
                 self::IBLOCK_VERSION_DEFAULT : self::IBLOCK_VERSION_ONE;
         }
     }

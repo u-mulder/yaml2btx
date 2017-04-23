@@ -12,7 +12,10 @@ require_once "./vendor/autoload.php";
 $g = new \Yaml2Btx\Generator();
 
 /* Generate file from provided config `iblock.yaml` and store it as `new_iblock.php` */
-$g->parse('./config/iblock.yaml')->save('./output/new_iblock.php');
+//$g->parse('./config/iblock.yaml')->save('./output/new_iblock.php');   // TODO uncomment
+
+/* Generate file from provided config `userfield.yaml` and store it as `new_uf.php` */
+//$g->parse('./config/userfield.yaml')->save('./output/new_uf.php');   // TODO uncomment
 
 /* Generate file from provided config `iblock.yaml` and donwload it */
 //$g->parse('./bxcodegen/configs/iblock.yaml')->download(); // TODO
