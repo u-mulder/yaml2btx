@@ -1,4 +1,4 @@
-# Yaml sample for iblock creation
+# Yaml sample for user field creation
 type: userfield
 # Fields of all cases are supported
 fields:

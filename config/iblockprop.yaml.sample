@@ -1,0 +1,41 @@
+# Yaml sample for iblock property creation
+type: iblockproperty
+# Fields of all cases are supported
+fields:
+    # iblock id
+    IBLOCK_ID: 12
+    # Active or not
+    active: Y
+    # properrty name
+    NAME: "Name goes here"
+    # Hint
+    HINT: "This fields is for something"
+    # sort
+    SORT: 240,
+    # Property code
+    CODE: LINKED_ITEMS
+    # xml id
+    XML_ID: ~
+    # Linked iblock id
+    LINK_IBLOCK_ID: 0
+    # Default value
+    default_value: ~
+    # List type: C(checkbox) or L(list)
+    LIST_TYPE: L
+    # property type [S, N, L, F, G, E]
+    PROPERTY_TYPE: S
+    # row count
+    ROW_COUNT: 1
+    # col count
+    col_count: 30
+    # Add description
+    WITH_DESCRIPTION: N
+    # Is searchable
+    SEARCHABLE: N
+    # Use in filter
+    FILTRABLE: Y
+    # Multiple
+    multiple: N
+    # Required
+    is_required: Y
+    # USER_TYPE and USER_TYPE_SETTINGS ignored

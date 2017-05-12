@@ -2,7 +2,7 @@
 @endcomponent
 
 /**
- * Creating iblock tepmlate script with D7.
+ * Creating iblock template script with D7.
  *
  * Docs to start:
  * - {@link https://dev.1c-bitrix.ru/api_d7/bitrix/iblock/iblocktable/index.php}

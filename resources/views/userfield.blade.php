@@ -22,13 +22,11 @@
  * - EDIT_IN_LIST allow edit in form, default "Y"
  * - IS_SEARCHABLE allow search, default "N"
  * - SHOW_FILTER - show in filter and filter type [N - not show, I - exact match, E - pattern, S - substring]
- *
- * // TODO
- * // EDIT_FORM_LABEL - массив языковых сообщений вида array("ru"=>"привет", "en"=>"hello")
- * // LIST_COLUMN_LABEL
- * //LIST_FILTER_LABEL
- * //ERROR_MESSAGE
- * //HELP_MESSAGE
+ * - EDIT_FORM_LABEL - arrays like array("ru"=>"привет", "en"=>"hello")
+ * - LIST_COLUMN_LABEL - arrays like array("ru"=>"привет", "en"=>"hello")
+ * - LIST_FILTER_LABEL - arrays like array("ru"=>"привет", "en"=>"hello")
+ * - ERROR_MESSAGE - arrays like array("ru"=>"привет", "en"=>"hello")
+ * - HELP_MESSAGE - arrays like array("ru"=>"привет", "en"=>"hello")
  *
  * Other fields can be added manually in generated code.
  *
