@@ -157,6 +157,21 @@ abstract class AbstractEntity
 
 
     /**
+     * Converting keys of a passed array to UPPER case
+     *
+     * @param array $arr Array which keys will be uppercased
+     *
+     * @return array Array with uppercased keys
+     *
+     * @author u_mulder <m264695502@gmail.com>
+     */
+    protected function normalizeKeys(array $arr)
+    {
+        return array_change_key_case($arr, CASE_UPPER);
+    }
+
+
+    /**
      * Method which prepares required keys for a template
      *
      * @param mixed $entity_data

@@ -1,0 +1,17 @@
+# Yaml sample for mail event creation
+type: mailevent
+# Fields of all cases are supported
+fields:
+    # Unique event nane
+    EVENT_NAME: "ms_send_letter"
+    # Lid
+    LID: ru
+    # Sort
+    sort: 200
+    # Event name
+    NAME: "Notify about something"
+    # Description with #MACRO#s
+    description: |
+        #MAIL_TO# - Paremeter number one
+        #DATE_SEND# - another parameter
+        #PAR_3# - third parameter
