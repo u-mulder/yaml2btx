@@ -51,6 +51,22 @@ class Mailevent extends AbstractEntity
             if (0 < $sort) {
                 $this->entity_data['me']['SORT'] = $sort;
             }
+
+            // Mail messages
+            $this->entity_data['msgs'] = [];
+            if (!empty($fields['MESSAGES']) && is_array($fields['MESSAGES'])) {
+                $entity_class = __NAMESPACE__ . '\\Mailmessage';
+                foreach ($fields['MESSAGES'] as $msg) {
+                    try {
+                        $this->entity_data['msgs'][] =
+                            (new $entity_class(['fields' => $msg]))
+                                ->getEntityProperty('msg');
+                    } catch (\Exception $e) {
+                        // TODO
+                        //throw new \Exception(sprintf(self::EXC_ENTITY_NOT_SUPPORTED, $type));
+                    }
+                }
+            }
         }
     }
 }

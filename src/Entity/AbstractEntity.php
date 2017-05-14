@@ -172,6 +172,24 @@ abstract class AbstractEntity
 
 
     /**
+     * Getting certain key from `this->entity_data`
+     *
+     * @param string $key Key to get
+     *
+     * @return mixed Value according to key
+     *
+     * @author u_mulder <m264695502@gmail.com>
+     */
+    protected function getEntityProperty($key = '')
+    {
+        $key = trim($key);
+
+        return isset($this->entity_data[$key]) ?
+            $this->entity_data[$key] : false;
+    }
+
+
+    /**
      * Method which prepares required keys for a template
      *
      * @param mixed $entity_data
