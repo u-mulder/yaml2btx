@@ -1,8 +1,9 @@
-@component('header')  // TODO
+@component('header')
 @endcomponent
 
 /**
  * Creating mail event defined by `$mail_event_data`.
+ * Optionally, messages can be added for created event
  *
  * Docs to start:
  * - {@link https://dev.1c-bitrix.ru/api_help/main/reference/ceventtype/index.php}
@@ -17,7 +18,6 @@
  * - DESCRIPTION text
  *
  * Base fields that are filled for mail message:
- * // TODO
  * - ACTIVE char(1) Y/N
  * - LID char(2)
  * - EMAIL_FROM
@@ -40,7 +40,7 @@ $mail_event_data = [
 
 @if (!empty($msgs))
 $mail_msgs_data = [
-    @foreach ($msgs as $msg)
+@foreach ($msgs as $msg)
     [
         'ACTIVE' => '{{ $msg['ACTIVE'] }}',
         'LID' => '{{ $msg['LID'] }}',
@@ -51,7 +51,7 @@ $mail_msgs_data = [
         'MESSAGE' => '{!! $msg['MESSAGE'] !!}',
         'BCC' => '{{ $msg['BCC'] }}',
     ],
-    @endforeach
+@endforeach
 ];
 @endif
 

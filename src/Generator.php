@@ -71,6 +71,13 @@ class Generator
     const EXC_PARSE_YAML = 'Fail to parse provided yaml: %s';
 
     /**
+     * @var string Extension for php-file
+     *
+     * @author u_mulder <m264695502@gmail.com>
+     */
+    const FILE_EXTENSION  = '.php';
+
+    /**
      * @var array Currently supported entities
      *
      * @author u_mulder <m264695502@gmail.com>
@@ -208,13 +215,45 @@ class Generator
 
 
     /**
-     * // TODO later
+     * Output generated code for downloading
+     *
      * Method will be completed later
      *
      * @author u_mulder <m264695502@gmail.com>
      */
     public function download()
     {
-        throw new \Exception('Method ' . __METHOD__ . ' not supported yet');
+        if (!($this->entity instanceof AbstractEntity)) {
+            throw new \Exception(self::EXC_ENTITY_UNKNOWN);
+        }
+
+        $res = $this->entity->render();
+
+        header('Content-Description: File Transfer');
+        /* `Content-Type` can also be `application/x-php` */
+        header('Content-Type: text/php');
+        header('Expires: 0');
+        header('Pragma: public');
+        header('Cache-Control: must-revalidate');
+
+        header('Content-disposition: attachment; filename=' . $this->generateFilename());
+        header('Content-Length: ' . mb_strlen($res));
+        echo $res;
+        exit;
+    }
+
+
+    /**
+     * Function generates filename
+     *
+     * @return string Filename
+     *
+     * @author u_mulder <m264695502@gmail.com>
+     */
+    protected function generateFilename()
+    {
+        $name = 'yaml2btx_' . uniqid();
+
+        return $name . static::FILE_EXTENSION;
     }
 }
