@@ -60,7 +60,7 @@ $ib_prop_data = [
 ];
 
 $ibp = new CIBlockProperty();
-$r = $ibp->add($prop);
+$r = $ibp->add($ib_prop_data);
 if ($r) {
     echo 'Iblock property with ID: ' . $r . ' added succesfully.' . PHP_EOL;
 } else {
